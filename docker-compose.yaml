@@ -1,9 +1,9 @@
 version: '3.8'
 
 services:
-  nestjs-app:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    ports:
-      - 3000:3000
+    nestjs-app:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        ports:
+            - 4000:5000 # By specifying 4000:5000 in the ports section, you are instructing Docker to map port 5000 inside the container to port 4000 on the host machine. This means that any traffic sent to port 4000 on the host machine will be forwarded to port 5000 inside the container.
